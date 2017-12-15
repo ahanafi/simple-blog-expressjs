@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= article.title
+    h6 Written by #{article.author}
+    p= article.body
+    br
+    a.btn.btn-success(href='/article/edit/'+article._id) Edit 
+    a.btn.btn-danger.delete-article(href='#', data-id=article._id, style='margin-left:5px;') Delete
+
+    
+
+    

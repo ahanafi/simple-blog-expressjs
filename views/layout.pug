@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title KnowledgeBase
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+    body
+
+        nav(style='border-radius:0px !important;').navbar.navbar-inverse
+            .container-fluid
+                .navbar-header
+                    button(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1').navbar-toggle.collapsed
+                        span.sr-only Toggle Navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(href='/').navbar-brand KnowledgeBase
+                
+                .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                    ul.nav.navbar-nav
+                        li
+                            a(href='/') Home
+                        li
+                            a(href='/articles/add') Add Article
+        
+        .container
+            != messages('message', locals)
+            block content
+            br
+            hr
+            footer
+            p Copyright &copy; 2017
+        script(type='text/javascript', src='/bower_components/jquery/dist/jquery.min.js')
+        script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(type='text/javascript', src='/js/script.js')
